@@ -1,7 +1,9 @@
 import { AddItemDialog } from "./components/AddItemDialog";
 import { ItemList } from "./components/ItemList";
 import { Footer } from "./components/Footer";
-import { OverviewCards } from "./components/OverviewCards";
+// import { OverviewCards } from "./components/OverviewCards";
+// import { CategoryCards } from "./components/CategoryCards";
+import { DashboardTabs } from "./components/DashboardTabs";
 
 export default function App() {
   return (
@@ -24,7 +26,7 @@ export default function App() {
 
           {/* Put OverviewCards and CategoryCards under DashboardTabs */}
           {/* And then use DashboardTabs here instead */}
-          <OverviewCards />
+          <DashboardTabs />
           <ItemList />
         </div>
       </main>

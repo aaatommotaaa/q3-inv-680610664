@@ -26,7 +26,7 @@ export function AddItemDialog() {
     e.preventDefault();
     if (!name || !quantity || !price) return;
 
-    // addInventoryItem(name, parseInt(quantity), parseFloat(price), category);
+    addInventoryItem(name, parseInt(quantity), parseFloat(price), category);
     setName("");
     setQuantity("");
     setPrice("");

@@ -25,6 +25,7 @@ export function CategoryCards() {
   return (
     <div className="grid gap-2 md:grid-cols-6">
       {categoryOptions.map((category) => {
+        const icon = iconMap[category.label];
         const categoryItems = inventory.filter(
           (item) => item.category === category.value,
         );
@@ -40,8 +41,21 @@ export function CategoryCards() {
         return (
           // Use Card component to display values by category
           <div>
-            {category.label} - ฿{categoryValue.toFixed(2)} - {categoryUnits}{" "}
-            units
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium">
+                  {icon} {category.label}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-xl font-bold">
+                  ฿{categoryValue.toFixed(2)}{" "}
+                </div>
+                <div className="text-muted-foreground">
+                  {categoryUnits} units
+                </div>
+              </CardContent>
+            </Card>
           </div>
         );
       })}
